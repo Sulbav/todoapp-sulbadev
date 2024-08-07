@@ -1,24 +1,38 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const nombre = document.getElementById("name")
+const password = document.getElementById("password")
+const mail = document.getElementById("mail")
+const form = document.getElementById("sesion")
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+let listLocal = localStorage.getItem("usuarios");
+let usersList = listLocal==null?[]:JSON.parse(listLocal);
 
-setupCounter(document.querySelector('#counter'))
+const nuevoUsuario = (name,contra,mail)=>{
+  const newUser ={
+    name,
+    contra,
+    mail
+  }
+
+  usersList.push(newUser)
+  guardarLUsuarios(usersList)
+}
+
+const guardarLUsuarios = (lista)=>{
+  localStorage.setItem("usuarios",JSON.stringify(lista))
+}
+
+form.addEventListener("submit",e=>{
+e.preventDefault();
+  let user = nombre.value
+  let contra = password.value
+  let email = mail.value
+
+  if (nombre.lengt >= 4 && password.lengt>= 5) {
+    nuevoUsuario(nombre,password,email)
+  console.log(localStorage.usuarios)
+  }else{
+    console.log("no registrado")
+  }
+})
+
+
