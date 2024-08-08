@@ -10,26 +10,31 @@
     <div id="app">
       <main>
         <h1>TodoAPP</h1>
-
-        <form id="sesion" action="">
-          <h2>Registrate</h2>
-          <div class="form-label">
-            <label for="name">Nombre</label>
-            <input id="name" name="" type="text" required>
-          </div>
-          <div class="form-label">
-            <label for="password">PassWord</label>
-            <input id="password" name="" type="password" required>
-          </div>
-          <div class="form-label">
-            <label for="mail">Mail</label>
-            <input id="mail" name="" type="email" required>
-          </div>
-          <button type="submit">sesion</button>
-        </form>
-
-
+        <div class="users-table">
+          <header>
+            <h2>Usuarios</h2>
+          </header>
+          <main class="users-list">
+          </main>
+        </div>
+        <button id="abrir-modal">Agregar Usuario</button>
       </main>
+      <section class="modal">
+        <div class="modal-container">
+          <form id="sesion" action="">
+            <h2>Agregar Usuario</h2>
+            <div class="form-label">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="" type="text" required>
+            </div>
+            <div class="form-label">
+              <label for="password">PassWord</label>
+              <input id="password" name="" type="password" required>
+            </div>
+            <button type="submit">Agregar</button>
+          </form>
+        </div>
+      </section>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
