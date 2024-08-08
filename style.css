@@ -10,13 +10,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
 
-#app{
+#app {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,15 +24,14 @@
   height: 100dvh;
 }
 
-main{
-
+main {
   padding: 5px;
   border: 3px solid #555;
   box-shadow: 0 0 120px 10px #0000009d;
   display: flex;
   gap: 10px;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: space-evenly;
   width: 400px;
   height: 500px;
@@ -41,7 +40,7 @@ main{
   border-radius: 5px;
 }
 
-button{
+button {
   font-weight: bold;
   border-radius: 4px;
   width: 120px;
@@ -51,12 +50,12 @@ button{
   background-color: #333;
 }
 
-label{
+label {
   font-size: 20px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-input{
+input {
   color: white;
   padding: 5px;
   font-weight: bold;
@@ -64,14 +63,13 @@ input{
   border: none;
   border-radius: 5px;
 
-  &:focus{
+  &:focus {
     background-color: #213547;
     outline: none;
   }
 }
 
-form{
-  
+form {
   padding: 10px;
   border-radius: 10px;
   background-color: #214735;
@@ -81,18 +79,18 @@ form{
   justify-content: center;
   gap: 20px;
   width: 300px;
-  height:max-content;
+  height: max-content;
 
-  .form-label{
+  .form-label {
     display: flex;
     gap: 2px;
     width: 100%;
-   justify-content: space-between;
-   align-items: center; 
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
-.users-table{
+.users-table {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +100,7 @@ form{
   width: 200px;
   font-size: 14px;
 
-  header{
+  header {
     padding: 5px;
     color: #fff;
     display: flex;
@@ -110,25 +108,25 @@ form{
     justify-content: center;
     width: 100%;
   }
-  span{
+  span {
     color: #ddd;
     flex: 1;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
   }
-  main{
+  main {
     padding: 5px;
     color: #222;
     display: flex;
     flex-direction: column;
-    justify-content:start;
+    justify-content: start;
     border: none;
     background-color: #214734;
     width: 100%;
     height: 300px;
-    
-    section{
+
+    section {
       border-radius: 5px;
       border-bottom: 2px solid #222;
       width: 100%;
@@ -138,16 +136,16 @@ form{
   }
 }
 
-.user{
-transition: .2s;
+.user {
+  transition: 0.2s;
 
-&:hover{
-  background-color: #572828;
-  scale: 1.1;
-}
+  &:hover {
+    background-color: #572828;
+    scale: 1.1;
+  }
 }
 
-.modal{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -155,9 +153,9 @@ transition: .2s;
   bottom: 0;
   display: flex;
   opacity: 0;
-  pointer-events:none;
+  pointer-events: none;
 
-  .modal-container{
+  .modal-container {
     width: 400px;
     height: 500px;
     background-color: #3333338c;
@@ -168,10 +166,10 @@ transition: .2s;
     justify-content: center;
     gap: 20px;
 
-    #cerrar-modal{
+    #cerrar-modal {
       background-color: #214734;
-      transition: .2s;
-      &:hover{
+      transition: 0.2s;
+      &:hover {
         background-color: #472121;
       }
     }
