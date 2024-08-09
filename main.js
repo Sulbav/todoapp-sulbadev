@@ -1,14 +1,19 @@
-import { dibujarUsuarios, nuevoUsuario } from "./ulogic";
+import { dibujarUsuarios, nuevoUsuario, eventoDeUsuario } from "./scripts/ulogic";
 
 window.addEventListener("load", (e) => {
   dibujarUsuarios();
+
+  const modal2 = document.getElementById("modal2")
+  const modal2Container = document.getElementById('modal2-container')
+  eventoDeUsuario(document.querySelectorAll(".user"),modal2,modal2Container);
 });
 
-const modal = document.querySelector(".modal");
+
+const modal1 = document.getElementById("modal1");
 const abrirModal = document.getElementById("abrir-modal");
 abrirModal.addEventListener("click", (e) => {
-  modal.style.opacity = 1;
-  modal.style.pointerEvents = "fill";
+  modal1.style.opacity = 1;
+  modal1.style.pointerEvents = "fill";
 });
 
 const form = document.getElementById("sesion");
@@ -24,3 +29,4 @@ form.addEventListener("submit", (e) => {
     alert("no registrado");
   }
 });
+
